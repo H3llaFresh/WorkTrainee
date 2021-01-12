@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.start.intro.IntroFragment"
+        android:label="IntroFragment" >
+        <action
+            android:id="@+id/action_introFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/nav_graph_auth"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.main.MainFragment"
+        android:label="MainFragment" />
+</navigation>

@@ -9,13 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FxSuperPro">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.screens.main.MainActivity"/>
+        <activity
+            android:name=".ui.screens.splash.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.FxSuperPro.Launch">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ui.screens.start.AuthorizationActivity"/>
     </application>
 
 </manifest>
