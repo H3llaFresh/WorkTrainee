@@ -7,11 +7,14 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import by.vlfl.fxsuperpro.databinding.FragmentIntroBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class IntroFragment : Fragment() {
 
     private var _binding: FragmentIntroBinding? = null
     private val binding get() = _binding!!
+
+    private val viewModel: IntroViewModel by viewModel()
 
     override fun onCreateView(
             inflater: LayoutInflater,
