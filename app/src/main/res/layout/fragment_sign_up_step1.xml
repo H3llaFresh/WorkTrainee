@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="by.vlfl.fxsuperpro.ui.screens.start.signup.step1.SignUpStep1ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/splash_screen_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSelectCountry"
+            android:layout_width="@dimen/width_img_select_country"
+            android:layout_height="@dimen/height_img_select_country"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:src="@drawable/img_sing_up_select_country"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFxProLogoSignUpStep1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2"
+            android:src="@drawable/ic_fxpro_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgSelectCountry" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textCountryOfBirth"
+            style="@style/TextAppearance.BankPro.SignUp.Step1.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_step1__main"
+            app:layout_constraintBottom_toTopOf="@id/inputCountryOfBirthSignUpStep1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgFxProLogoSignUpStep1" />
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputCountryOfBirthSignUpStep1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_26"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/gold_400"
+            android:textColorHint="@color/gold_400"
+            android:hint="@string/sign_up_step1__hint_country_of_residence"
+            android:inputType="textCapWords|textNoSuggestions"
+            android:onClick="@{() -> vm.setCountryOfBirth()}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textCountryOfBirth" />
+
+        <Button
+            android:id="@+id/buttonConfirmSignUpStep1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_38"
+            android:text="@string/action_confirm"
+            android:backgroundTint="@color/gold_400"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

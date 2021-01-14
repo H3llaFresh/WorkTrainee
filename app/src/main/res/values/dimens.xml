@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="line_spacing_extra_2">2sp</dimen>
 
+    <dimen name="text_size_22">22sp</dimen>
     <dimen name="text_size_24">24sp</dimen>
 
     <dimen name="margin_8">8dp</dimen>
     <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="width_img_select_country">180dp</dimen>
+    <dimen name="height_img_select_country">180dp</dimen>
+    <dimen name="margin_26">26dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_38">38dp</dimen>
 </resources>

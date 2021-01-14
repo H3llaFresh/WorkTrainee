@@ -1,11 +1,7 @@
-package by.vlfl.fxsuperpro.data.remote.network
+package by.vlfl.fxsuperpro.data
 
 import by.vlfl.fxsuperpro.data.json.models.CountryOfResidenceJson
-import retrofit2.http.GET
 
-interface HttpApi {
-
-    @GET("/v1/registration/countries")
+interface IRemoteReferencesDataSource {
     suspend fun getCountriesOfResidence(): List<CountryOfResidenceJson>
-
 }

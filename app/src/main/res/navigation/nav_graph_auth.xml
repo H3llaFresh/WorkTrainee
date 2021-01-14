@@ -9,13 +9,11 @@
         android:name="by.vlfl.fxsuperpro.ui.screens.start.intro.IntroFragment"
         android:label="IntroFragment" >
         <action
-            android:id="@+id/action_introFragment_to_mainFragment"
-            app:destination="@id/mainFragment"
-            app:popUpTo="@+id/nav_graph_auth"
-            app:popUpToInclusive="true" />
+            android:id="@+id/open_signUpStep1"
+            app:destination="@id/signUpStep1Fragment" />
     </fragment>
     <fragment
-        android:id="@+id/mainFragment"
-        android:name="by.vlfl.fxsuperpro.ui.screens.main.MainFragment"
-        android:label="MainFragment" />
+        android:id="@+id/signUpStep1Fragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.start.signup.step1.SignUpStep1Fragment"
+        android:label="SignUpStep1Fragment" />
 </navigation>

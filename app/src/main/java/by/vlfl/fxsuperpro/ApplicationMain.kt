@@ -1,8 +1,7 @@
 package by.vlfl.fxsuperpro
 
 import android.app.Application
-import by.vlfl.fxsuperpro.modules.networkModule
-import by.vlfl.fxsuperpro.modules.viewModelModule
+import by.vlfl.fxsuperpro.modules.*
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
@@ -19,7 +18,10 @@ class ApplicationMain : Application() {
             modules(
                 listOf(
                     networkModule,
-                    viewModelModule
+                    viewModelModule,
+                    dataSourceModule,
+                    gatewayModule,
+                    useCaseModule
                 )
             )
         }

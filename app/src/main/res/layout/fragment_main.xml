@@ -9,10 +9,9 @@
     android:background="@color/splash_screen_color">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textFragmentMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/dashboard_text"
         android:textSize="@dimen/text_size_24"
         android:textColor="@color/gold_400"
         app:layout_constraintBottom_toBottomOf="parent"

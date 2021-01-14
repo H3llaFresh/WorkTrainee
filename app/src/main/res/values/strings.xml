@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">FxSuperPro</string>
-    <string name="dashboard_text">Hi there! Have a nice day!</string>
 
+    <string name="action_confirm">Confirm</string>
+    <string name="action_sign_up">Sign up</string>
 
-    <string name="landing_screen__action_register">Sign up</string>
+    <string name="sign_up_step1__main">Select your country of residence</string>
+    <string name="sign_up_step1__hint_country_of_residence">Country of residence</string>
 </resources>
