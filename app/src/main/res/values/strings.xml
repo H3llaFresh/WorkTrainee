@@ -3,7 +3,17 @@
 
     <string name="action_confirm">Confirm</string>
     <string name="action_sign_up">Sign up</string>
+    <string name="action_next">Next</string>
 
-    <string name="sign_up_step1__main">Select your country of residence</string>
+    <string name="sign_up_step1__main">Select your country<br/>of residence</string>
     <string name="sign_up_step1__hint_country_of_residence">Country of residence</string>
+
+    <string name="sign_up_step2__main">Enter your Email and Password</string>
+    <string name="sign_up_step2__hint_your_email">Your email</string>
+    <string name="sign_up_step2__hint_repeat_your_email">Repeat your email</string>
+    <string name="sign_up_step2__hint_your_password">Your password</string>
+    <string name="sign_up_step2__hint_repeat_your_password">Repeat your password</string>
+    <string name="sign_up_step2__terms_agreement">By proceeding, you hereby agree with BankPro<br/>
+Terms &amp; Conditions and Privacy Policy.</string>
+
 </resources>

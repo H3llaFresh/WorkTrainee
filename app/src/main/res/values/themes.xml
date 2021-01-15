@@ -17,4 +17,5 @@
     <style name="Theme.FxSuperPro.Launch">
         <item name="android:windowBackground">@drawable/img_launch_screen</item>
     </style>
+
 </resources>

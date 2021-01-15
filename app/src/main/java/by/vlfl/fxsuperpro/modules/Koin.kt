@@ -15,6 +15,7 @@ import by.vlfl.fxsuperpro.ui.screens.start.AuthorizationViewModel
 import by.vlfl.fxsuperpro.ui.screens.start.intro.IntroViewModel
 import by.vlfl.fxsuperpro.ui.screens.start.signup.step1.SignUpStep1ViewModel
 import by.vlfl.fxsuperpro.ui.screens.start.signup.step1.countryOfResidence.CountryOfResidenceViewModel
+import by.vlfl.fxsuperpro.ui.screens.start.signup.step2.SignUpStep2ViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -42,6 +43,8 @@ val viewModelModule: Module = module {
     viewModel { MainViewModel() }
 
     viewModel { SignUpStep1ViewModel() }
+
+    viewModel { SignUpStep2ViewModel() }
 
     viewModel { CountryOfResidenceViewModel(getCountriesOfResidence = get())}
 }

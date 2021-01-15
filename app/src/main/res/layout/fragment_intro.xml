@@ -26,16 +26,17 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/img_intro_fragment" />
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSingUp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_18"
             android:layout_marginEnd="@dimen/margin_18"
-            android:layout_marginBottom="@dimen/margin_8"
-            android:backgroundTint="@color/gold_400"
+            android:layout_marginBottom="@dimen/margin_38"
             android:text="@string/action_sign_up"
             android:onClick="@{() -> vm.openRegister()}"
+            android:backgroundTint="@color/gold_400"
+            app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

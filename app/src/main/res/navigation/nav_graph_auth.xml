@@ -15,5 +15,13 @@
     <fragment
         android:id="@+id/signUpStep1Fragment"
         android:name="by.vlfl.fxsuperpro.ui.screens.start.signup.step1.SignUpStep1Fragment"
-        android:label="SignUpStep1Fragment" />
+        android:label="SignUpStep1Fragment" >
+        <action
+            android:id="@+id/open_next_step"
+            app:destination="@id/signUpStep2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpStep2Fragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.start.signup.step2.SignUpStep2Fragment"
+        android:label="SignUpStep2Fragment" />
 </navigation>

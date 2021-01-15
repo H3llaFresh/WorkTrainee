@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import by.vlfl.fxsuperpro.android.lifecycle.SingleLiveEvent
+import by.vlfl.fxsuperpro.android.lifecycle.emit
 import by.vlfl.fxsuperpro.android.lifecycle.emptyMutableLiveData
 import by.vlfl.fxsuperpro.android.lifecycle.emptySingleLiveEvent
 import by.vlfl.fxsuperpro.domain.models.CountryOfResidence
@@ -20,7 +21,12 @@ class SignUpStep1ViewModel : ViewModel() {
     val openNextStepEvent: LiveData<Nothing>
         get() = _openNextStepEvent
 
+
     fun setCountryOfBirth() {
         _setCountryOfBirthEvent.postValue(countryOfBirth.value)
+    }
+
+    fun openNextStep() {
+        _openNextStepEvent.emit()
     }
 }
