@@ -17,7 +17,7 @@ class ApplicationMain : Application() {
             androidContext(this@ApplicationMain)
             modules(
                 listOf(
-                    networkModule,
+                    //networkModule,
                     viewModelModule,
                     dataSourceModule,
                     gatewayModule,

@@ -12,5 +12,6 @@
     <color name="password_toggle_color">#8E8E93</color>
     <color name="label_color_dark">#99EBEBF5</color>
     <color name="input_background_color">#3A3A3C</color>
+    <color name="placeholder_color">#424A4D</color>
     <color name="gold_400">#C59A78</color>
 </resources>

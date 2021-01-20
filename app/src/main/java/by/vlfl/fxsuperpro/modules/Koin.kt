@@ -1,11 +1,7 @@
 package by.vlfl.fxsuperpro.modules
 
-import by.vlfl.fxsuperpro.config.API_URL
 import by.vlfl.fxsuperpro.data.IRemoteReferencesDataSource
 import by.vlfl.fxsuperpro.data.remote.ReferencesDataSource
-import by.vlfl.fxsuperpro.data.remote.network.provideHttpApi
-import by.vlfl.fxsuperpro.data.remote.network.provideHttpLoggingInterceptor
-import by.vlfl.fxsuperpro.data.remote.network.provideOkHttpClient
 import by.vlfl.fxsuperpro.domain.ICountryGateway
 import by.vlfl.fxsuperpro.domain.usecase.GetCountriesOfResidence
 import by.vlfl.fxsuperpro.gateway.CountryGateway
@@ -20,18 +16,18 @@ import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
 
-val networkModule: Module = module {
-
-    single { provideHttpLoggingInterceptor() }
-
-    single { provideOkHttpClient(logging = get()) }
-
-    single { provideHttpApi(
-        baseUrl = API_URL,
-        moshi = get(),
-        okHttpClient = get()
-    )}
-}
+//val networkModule: Module = module {
+//
+//    single { provideHttpLoggingInterceptor() }
+//
+//    single { provideOkHttpClient(logging = get()) }
+//
+//    single { provideHttpApi(
+//        baseUrl = API_URL,
+//        moshi = get(),
+//        okHttpClient = get()
+//    )}
+//}
 
 val viewModelModule: Module = module {
     viewModel { SplashViewModel() }
@@ -46,15 +42,15 @@ val viewModelModule: Module = module {
 
     viewModel { SignUpStep2ViewModel() }
 
-    viewModel { CountryOfResidenceViewModel(getCountriesOfResidence = get())}
+    viewModel { CountryOfResidenceViewModel(getCountriesOfResidence = get()) }
 }
 
 val dataSourceModule: Module = module {
-    single<IRemoteReferencesDataSource> { ReferencesDataSource(httpApi = get()) }
+    single<IRemoteReferencesDataSource> { ReferencesDataSource() }
 }
 
 val gatewayModule: Module = module {
-    single<ICountryGateway> {CountryGateway(remote = get())}
+    single<ICountryGateway> { CountryGateway(remote = get()) }
 }
 
 val useCaseModule: Module = module {

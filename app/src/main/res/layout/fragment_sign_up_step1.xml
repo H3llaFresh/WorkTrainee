@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
+
         <variable
             name="vm"
             type="by.vlfl.fxsuperpro.ui.screens.start.signup.step1.SignUpStep1ViewModel" />
@@ -36,34 +37,45 @@
             app:layout_constraintTop_toBottomOf="@id/imgSelectCountry" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/textCountryOfBirth"
+            android:id="@+id/tvCountryOfResidence"
             style="@style/TextAppearance.BankPro.Title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_27"
             android:text="@string/sign_up_step1__main"
-            app:layout_constraintBottom_toTopOf="@id/inputCountryOfBirthSignUpStep1"
+            app:layout_constraintBottom_toTopOf="@id/wrapperInputCountryOfResidence"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/imgFxProLogoSignUpStep1" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/inputCountryOfBirthSignUpStep1"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wrapperInputCountryOfResidence"
+            style="@style/TextAppearance.BankPro.Label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/margin_16"
             android:layout_marginTop="@dimen/margin_26"
             android:layout_marginEnd="@dimen/margin_16"
-            android:clickable="true"
-            android:focusable="true"
-            android:backgroundTint="@color/white"
-            android:textColor="@color/gold_400"
-            android:textColorHint="@color/gold_400"
-            android:hint="@string/sign_up_step1__hint_country_of_residence"
-            android:inputType="textCapWords|textNoSuggestions"
-            android:onClick="@{() -> vm.setCountryOfBirth()}"
+            app:boxStrokeColor="@color/gold_400"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/textCountryOfBirth" />
+            app:layout_constraintTop_toBottomOf="@id/tvCountryOfResidence">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputCountryOfResidenceSignUpStep1"
+                style="@style/TextAppearance.BankPro.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/input_background_color"
+                android:focusable="false"
+                android:clickable="true"
+                android:hint="@string/sign_up_step1__hint_country_of_residence"
+                android:inputType="textCapWords|textNoSuggestions"
+                android:onClick="@{() -> vm.openCountryOfResidenceScreen()}"
+                android:textColor="@color/gold_400"
+                android:textColorHint="@color/gold_400" />
+        </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonConfirmSignUpStep1"
@@ -72,9 +84,11 @@
             android:layout_marginStart="@dimen/margin_16"
             android:layout_marginEnd="@dimen/margin_16"
             android:layout_marginBottom="@dimen/margin_38"
-            android:onClick="@{() -> vm.openNextStep()}"
-            android:text="@string/action_confirm"
             android:backgroundTint="@color/gold_400"
+            android:onClick="@{() -> vm.openNextStep()}"
+            android:paddingTop="12dp"
+            android:paddingBottom="14dp"
+            android:text="@string/action_confirm"
             app:cornerRadius="10dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

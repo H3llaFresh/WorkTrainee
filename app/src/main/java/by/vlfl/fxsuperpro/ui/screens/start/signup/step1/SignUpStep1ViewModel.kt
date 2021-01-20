@@ -11,19 +11,18 @@ import by.vlfl.fxsuperpro.domain.models.CountryOfResidence
 
 class SignUpStep1ViewModel : ViewModel() {
 
-    val countryOfBirth: MutableLiveData<CountryOfResidence> = emptyMutableLiveData()
+    val countryOfResidence: MutableLiveData<CountryOfResidence> = emptyMutableLiveData()
 
-    private val _setCountryOfBirthEvent: SingleLiveEvent<CountryOfResidence> = emptySingleLiveEvent()
-    val setCountryOfBirthEvent: LiveData<CountryOfResidence>
-        get() = _setCountryOfBirthEvent
+    private val _openCountryOfResidenceScreenEvent: SingleLiveEvent<Nothing> = emptySingleLiveEvent()
+    val openCountryOfResidenceScreenEvent: LiveData<Nothing>
+        get() = _openCountryOfResidenceScreenEvent
 
     private val _openNextStepEvent: SingleLiveEvent<Nothing> = emptySingleLiveEvent()
     val openNextStepEvent: LiveData<Nothing>
         get() = _openNextStepEvent
 
-
-    fun setCountryOfBirth() {
-        _setCountryOfBirthEvent.postValue(countryOfBirth.value)
+    fun openCountryOfResidenceScreen() {
+        _openCountryOfResidenceScreenEvent.emit()
     }
 
     fun openNextStep() {

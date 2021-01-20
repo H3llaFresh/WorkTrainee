@@ -1,7 +1,6 @@
 package by.vlfl.fxsuperpro.data.json.models
 
 import androidx.core.net.toUri
-import by.vlfl.fxsuperpro.config.API_URL
 import by.vlfl.fxsuperpro.domain.models.CountryOfResidence
 import by.vlfl.fxsuperpro.domain.models.CountryRegisterAvailability
 import com.squareup.moshi.Json
@@ -21,7 +20,8 @@ fun CountryOfResidenceJson.asDomainModel(): CountryOfResidence {
         name = name,
         code = code,
         current = current,
-        imageUrl = if (!imageUrl.isNullOrEmpty()) "$API_URL$imageUrl".toUri() else null,
+        //imageUrl = if (!imageUrl.isNullOrEmpty()) "$API_URL$imageUrl".toUri() else null,
+        imageUrl = if (!imageUrl.isNullOrEmpty()) "$imageUrl".toUri() else null,
         status = when (status) {
             "active" -> CountryRegisterAvailability.Active
             "inactive" -> CountryRegisterAvailability.Inactive
