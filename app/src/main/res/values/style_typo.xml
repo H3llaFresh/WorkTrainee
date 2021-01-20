@@ -12,6 +12,20 @@
         <item name="android:fontFamily">@font/sfpro_display_regular</item>
         <item name="android:textColor">@color/white</item>
     </style>
+    
+    <style name="TextAppearance.BankPro.Basic" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="lineHeight">@dimen/line_height_22</item>
+        <item name="fontFamily">@font/sfpro_display_semibold</item>
+        <item name="android:textSize">@dimen/text_size_17</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextAppearance.BankPro.Basic.Button" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="lineHeight">@dimen/line_height_22</item>
+        <item name="android:fontFamily">@font/sfpro_display_semibold</item>
+        <item name="android:textSize">@dimen/text_size_17</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
 
     <style name="TextAppearance.BankPro.Title" parent="TextAppearance.BankPro.Body1">
         <item name="fontFamily">@font/sfpro_display_bold</item>
@@ -34,12 +48,6 @@
         <item name="android:gravity">center</item>
         <item name="android:textSize">@dimen/text_size_13</item>
         <item name="android:textColor">@color/label_color_dark</item>
-    </style>
-    
-    <style name="TextAppearance.BankPro.SignUp.CountryOfResidence.Name" parent="TextAppearance.BankPro.Body2">
-        <item name="lineHeight">@dimen/line_height_22</item>
-        <item name="android:textSize">@dimen/text_size_17</item>
-        <item name="fontWeight">600</item>
     </style>
 
 </resources>

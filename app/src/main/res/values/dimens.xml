@@ -30,4 +30,7 @@
     <dimen name="margin_10">10dp</dimen>
     <dimen name="margin_12">12dp</dimen>
     <dimen name="margin_27">27dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_44">44dp</dimen>
 </resources>

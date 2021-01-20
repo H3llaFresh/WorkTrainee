@@ -18,16 +18,32 @@
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivIntro"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            app:layout_constraintBottom_toTopOf="@+id/buttonSingUp"
+            app:layout_constraintBottom_toTopOf="@+id/tvIntro"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/img_intro_fragment" />
+            app:srcCompat="@drawable/img_intro" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvIntro"
+            style="@style/TextAppearance.BankPro.Basic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_35"
+            android:text="@string/intro__main"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@id/buttonSingUp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivIntro" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonSingUp"
+            style="@style/TextAppearance.BankPro.Basic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingTop="12dp"

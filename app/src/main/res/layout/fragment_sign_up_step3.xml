@@ -1,43 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <data>
-
-        <variable
-            name="vm"
-            type="by.vlfl.fxsuperpro.ui.screens.start.signup.step2.SignUpStep2ViewModel" />
-
-    </data>
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:background="@color/splash_screen_color">
 
-        <include
-            android:id="@+id/toolbar_residential_address"
-            layout="@layout/toolbar" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvMainSignUpStep2"
-            style="@style/TextAppearance.BankPro.Title"
-            android:layout_width="0dp"
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFxProLogoSignUpStep2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_16"
-            android:layout_marginEnd="@dimen/margin_16"
-            android:text="@string/sign_up_step2__main"
-            app:layout_constraintBottom_toTopOf="@id/wrapperInputStreetAndNumberStep2"
+            android:src="@drawable/ic_fxpro_invest_logo"
+            app:layout_constraintBottom_toTopOf="@+id/textEnterEmailAndPasswordSignUpStep2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolbar_residential_address"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="packed" />
 
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textEnterEmailAndPasswordSignUpStep2"
+            style="@style/TextAppearance.BankPro.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_42"
+            android:text="@string/sign_up_step3__main"
+            app:layout_constraintBottom_toTopOf="@+id/wrapperInputEmailSignUpStep2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgFxProLogoSignUpStep2" />
+
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/wrapperInputStreetAndNumberStep2"
+            android:id="@+id/wrapperInputEmailSignUpStep2"
             style="@style/TextAppearance.BankPro.Label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -46,27 +43,26 @@
             android:layout_marginEnd="@dimen/margin_16"
             app:boxStrokeColor="@color/gold_400"
             app:errorEnabled="true"
-            app:layout_constraintBottom_toTopOf="@id/wrapperInputFloorApartmentStep2"
+            app:layout_constraintBottom_toTopOf="@+id/wrapperInputRepeatEmailSignUpStep2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvMainSignUpStep2"
+            app:layout_constraintTop_toBottomOf="@+id/textEnterEmailAndPasswordSignUpStep2"
             app:layout_constraintVertical_chainStyle="packed">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputStreetAndNumberSignUpStep2"
+                android:id="@+id/inputEmailSignUpStep2"
                 style="@style/TextAppearance.BankPro.Body2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autofillHints="false"
-                android:text="@={vm.streetAndNumber}"
                 android:background="@color/input_background_color"
-                android:hint="@string/sign_up_step2__hint_street_and_number"
+                android:hint="@string/sign_up_step3__hint_your_email"
                 android:inputType="text"
                 android:lines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/wrapperInputFloorApartmentStep2"
+            android:id="@+id/wrapperInputRepeatEmailSignUpStep2"
             style="@style/TextAppearance.BankPro.Label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -75,55 +71,26 @@
             android:layout_marginEnd="@dimen/margin_16"
             app:boxStrokeColor="@color/gold_400"
             app:errorEnabled="true"
-            app:layout_constraintBottom_toTopOf="@id/wrapperInputPostalCodeStep2"
+            app:layout_constraintBottom_toTopOf="@+id/wrapperInputPasswordSignUpStep2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/wrapperInputStreetAndNumberStep2"
+            app:layout_constraintTop_toBottomOf="@+id/wrapperInputEmailSignUpStep2"
             app:layout_constraintVertical_chainStyle="packed">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputFloorApartmentStep2"
+                android:id="@+id/inputRepeatEmailSignUpStep2"
                 style="@style/TextAppearance.BankPro.Body2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autofillHints="false"
                 android:background="@color/input_background_color"
-                android:hint="@string/sign_up_step2__hint_floor_apartment"
-                android:inputType="number"
-                android:lines="1" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/wrapperInputPostalCodeStep2"
-            style="@style/TextAppearance.BankPro.Label"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/margin_16"
-            android:layout_marginTop="@dimen/margin_8"
-            android:layout_marginEnd="@dimen/margin_16"
-            app:boxStrokeColor="@color/gold_400"
-            app:errorEnabled="true"
-            app:layout_constraintBottom_toTopOf="@id/wrapperInputCityStep2"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/wrapperInputFloorApartmentStep2"
-            app:layout_constraintVertical_chainStyle="packed">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputPostalCodeStep2"
-                style="@style/TextAppearance.BankPro.Body2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:autofillHints="false"
-                android:text="@={vm.postalCode}"
-                android:background="@color/input_background_color"
-                android:hint="@string/sign_up_step2__hint_postal_code"
+                android:hint="@string/sign_up_step3__hint_repeat_your_email"
                 android:inputType="text"
                 android:lines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/wrapperInputCityStep2"
+            android:id="@+id/wrapperInputPasswordSignUpStep2"
             style="@style/TextAppearance.BankPro.Label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -131,28 +98,29 @@
             android:layout_marginTop="@dimen/margin_8"
             android:layout_marginEnd="@dimen/margin_16"
             app:boxStrokeColor="@color/gold_400"
+            app:passwordToggleEnabled="true"
             app:errorEnabled="true"
-            app:layout_constraintBottom_toTopOf="@id/wrapperInputCountryOfResidenceSignUpStep2"
+            app:passwordToggleTint="@color/password_toggle_color"
+            app:layout_constraintBottom_toTopOf="@+id/wrapperInputRepeatPasswordSignUpStep2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/wrapperInputPostalCodeStep2"
+            app:layout_constraintTop_toBottomOf="@+id/wrapperInputRepeatEmailSignUpStep2"
             app:layout_constraintVertical_chainStyle="packed">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputCitySignUpStep2"
+                android:id="@+id/inputPasswordSignUpStep2"
                 style="@style/TextAppearance.BankPro.Body2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:autofillHints="false"
-                android:text="@={vm.city}"
                 android:background="@color/input_background_color"
-                android:hint="@string/sign_up_step2__hint_city_town"
-                android:inputType="text"
+                android:hint="@string/sign_up_step3__hint_your_password"
+                android:inputType="textPassword"
                 android:lines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/wrapperInputCountryOfResidenceSignUpStep2"
+            android:id="@+id/wrapperInputRepeatPasswordSignUpStep2"
             style="@style/TextAppearance.BankPro.Label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -160,44 +128,54 @@
             android:layout_marginTop="@dimen/margin_8"
             android:layout_marginEnd="@dimen/margin_16"
             app:boxStrokeColor="@color/gold_400"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/password_toggle_color"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@+id/textTermsAgreementSignUpStep2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wrapperInputPasswordSignUpStep2"
+            app:layout_constraintVertical_chainStyle="packed">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputRepeatPasswordSignUpStep2"
+                style="@style/TextAppearance.BankPro.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="false"
+                android:background="@color/input_background_color"
+                android:hint="@string/sign_up_step3__hint_repeat_your_password"
+                android:inputType="textPassword"
+                android:lines="1" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTermsAgreementSignUpStep2"
+            style="@style/TextAppearance.BankPro.SignUp.Step2.TermsAgreement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_16"
+            android:text="@string/sign_up_step3__terms_agreement"
             app:layout_constraintBottom_toTopOf="@id/buttonNextSignUpStep2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/wrapperInputCityStep2">
-
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/inputCountryOfResidenceSignUpStep2"
-                style="@style/TextAppearance.BankPro.Body2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@color/input_background_color"
-                android:clickable="true"
-                android:cursorVisible="false"
-                android:focusable="false"
-                android:hint="@string/sign_up__hint_country_of_residence"
-                android:inputType="textCapWords|textNoSuggestions"
-                android:text="@{vm.countryOfResidence.name}"
-                android:onClick="@{() -> vm.openCountryOfResidenceScreen()}" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintStart_toStartOf="parent" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/buttonNextSignUpStep2"
             style="@style/TextAppearance.BankPro.Basic"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:paddingTop="12dp"
+            android:paddingBottom="14dp"
             android:layout_marginStart="@dimen/margin_16"
             android:layout_marginEnd="@dimen/margin_16"
             android:layout_marginBottom="@dimen/margin_38"
             android:backgroundTint="@color/gold_400"
-            android:enabled="@{vm.allFieldsValid}"
-            android:onClick="@{() -> vm.openStep3()}"
-            android:paddingTop="12dp"
-            android:paddingBottom="14dp"
-            android:text="@string/action_next"
             app:cornerRadius="10dp"
+            android:text="@string/action_next"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

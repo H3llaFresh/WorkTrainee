@@ -1,6 +1,5 @@
 package by.vlfl.fxsuperpro.domain.models
 
-import android.net.Uri
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize
 
@@ -9,6 +8,7 @@ data class CountryOfResidence(
     val name: String,
     val code: String,
     val current: Boolean,
-    val imageUrl: Uri?,
+    //val imageUrl: Uri?,
+    val imageUrl: String?,
     val status: CountryRegisterAvailability
 ): Parcelable

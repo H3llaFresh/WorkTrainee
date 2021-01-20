@@ -5,13 +5,13 @@ import by.vlfl.fxsuperpro.data.remote.ReferencesDataSource
 import by.vlfl.fxsuperpro.domain.ICountryGateway
 import by.vlfl.fxsuperpro.domain.usecase.GetCountriesOfResidence
 import by.vlfl.fxsuperpro.gateway.CountryGateway
-import by.vlfl.fxsuperpro.ui.screens.main.MainViewModel
 import by.vlfl.fxsuperpro.ui.screens.splash.SplashViewModel
 import by.vlfl.fxsuperpro.ui.screens.start.AuthorizationViewModel
 import by.vlfl.fxsuperpro.ui.screens.start.intro.IntroViewModel
 import by.vlfl.fxsuperpro.ui.screens.start.signup.step1.SignUpStep1ViewModel
 import by.vlfl.fxsuperpro.ui.screens.start.signup.step1.countryOfResidence.CountryOfResidenceViewModel
 import by.vlfl.fxsuperpro.ui.screens.start.signup.step2.SignUpStep2ViewModel
+import by.vlfl.fxsuperpro.ui.screens.start.signup.step3.SignUpStep3ViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.core.module.Module
 import org.koin.dsl.module
@@ -36,11 +36,11 @@ val viewModelModule: Module = module {
 
     viewModel { IntroViewModel() }
 
-    viewModel { MainViewModel() }
-
     viewModel { SignUpStep1ViewModel() }
 
     viewModel { SignUpStep2ViewModel() }
+
+    viewModel { SignUpStep3ViewModel() }
 
     viewModel { CountryOfResidenceViewModel(getCountriesOfResidence = get()) }
 }

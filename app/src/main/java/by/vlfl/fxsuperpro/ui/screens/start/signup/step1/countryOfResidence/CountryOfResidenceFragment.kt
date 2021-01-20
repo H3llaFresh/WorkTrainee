@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import by.vlfl.fxsuperpro.R
 import by.vlfl.fxsuperpro.config.KEY_RESIDENCE_COUNTRY_REQUEST
 import by.vlfl.fxsuperpro.config.KEY_RESIDENCE_COUNTRY_RESULT
 import by.vlfl.fxsuperpro.databinding.FragmentCountryOfResidenceBinding
@@ -36,11 +37,11 @@ class CountryOfResidenceFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         setUpAdapter()
+        setUpToolbar()
 
         observeCountries()
 
         viewModel.getCountries()
-        //setFragmentResultListener(KEY_RESIDENCE_COUNTRY_REQUEST, )
     }
 
     private fun observeCountries() {
@@ -57,7 +58,19 @@ class CountryOfResidenceFragment : Fragment() {
             findNavController().popBackStack()
         })
 
-        binding.rvCountriesOfResidence.layoutManager = LinearLayoutManager(context)
-        binding.rvCountriesOfResidence.adapter = countriesAdapter
+        binding.rvCountriesOfResidence.apply {
+            layoutManager = LinearLayoutManager(context)
+            adapter = countriesAdapter
+        }
+    }
+
+    private fun setUpToolbar() {
+        binding.toolbarCountryOfResidence.apply {
+            buttonBackToolbar.visibility = View.VISIBLE
+            buttonBackToolbar.setOnClickListener {
+                findNavController().popBackStack()
+            }
+            tvToolbar.setText(R.string.toolbar_residence_country__title)
+        }
     }
 }
