@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="by.vlfl.fxsuperpro.ui.screens.start.signup.step1.SignUpStep1ViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:background="@color/splash_screen_color">
+
+        <include
+            android:id="@+id/toolbar_sign_up_step1"
+            layout="@layout/toolbar"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgSelectCountry"
+            android:layout_width="@dimen/width_img_select_country"
+            android:layout_height="@dimen/height_img_select_country"
+            android:layout_marginTop="?attr/actionBarSize"
+            android:src="@drawable/img_sing_up_select_country"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_sign_up_step1" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgFxProLogoSignUpStep1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_2"
+            android:src="@drawable/ic_fxpro_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgSelectCountry" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountryOfResidence"
+            style="@style/TextAppearance.BankPro.Title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_27"
+            android:text="@string/sign_up_step1__main"
+            app:layout_constraintBottom_toTopOf="@id/wrapperInputCountryOfResidence"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgFxProLogoSignUpStep1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/wrapperInputCountryOfResidence"
+            style="@style/TextAppearance.BankPro.Label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginTop="@dimen/margin_26"
+            android:layout_marginEnd="@dimen/margin_16"
+            app:boxStrokeColor="@color/gold_400"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvCountryOfResidence">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputCountryOfResidenceSignUpStep1"
+                style="@style/TextAppearance.BankPro.Body2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/input_background_color"
+                android:clickable="true"
+                android:cursorVisible="false"
+                android:focusable="false"
+                android:hint="@string/sign_up__hint_country_of_residence"
+                android:inputType="textCapWords|textNoSuggestions"
+                android:text="@{vm.countryOfResidence.name}"
+                android:onClick="@{() -> vm.openCountryOfResidenceScreen()}" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonConfirmSignUpStep1"
+            style="@style/TextAppearance.BankPro.Basic"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_16"
+            android:layout_marginEnd="@dimen/margin_16"
+            android:layout_marginBottom="@dimen/margin_38"
+            android:backgroundTint="@color/gold_400"
+            android:enabled="@{vm.countryOfResidence != null}"
+            android:onClick="@{() -> vm.openNextStep()}"
+            android:paddingTop="12dp"
+            android:paddingBottom="14dp"
+            android:text="@string/action_confirm"
+            app:cornerRadius="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

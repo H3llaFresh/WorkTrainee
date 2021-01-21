@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">FxSuperPro</string>
+
+    <string name="action_confirm">Confirm</string>
+    <string name="action_sign_up">Sign Up</string>
+    <string name="action_next">Next</string>
+
+    <string name="toolbar_residence_country__title">Select Country</string>
+    <string name="toolbar_sign_up__title">Sign Up</string>
+    <string name="toolbar_sign_up_step1__title">Welcome to FxPro Invest</string>
+
+    <string name="intro__main">Make unlimited commission-free trades in stocks, currencies and futures</string>
+
+    <string name="sign_up__hint_country_of_residence">Country of residence</string>
+
+    <string name="sign_up_step1__main">Select your country <br/>of residence</string>
+
+    <string name="sign_up_step2__main">What is your residential address?</string>
+    <string name="sign_up_step2__hint_street_and_number">Street &amp; number</string>
+    <string name="sign_up_step2__hint_floor_apartment">Floor / Apartment</string>
+    <string name="sign_up_step2__hint_postal_code">Postal / Zip Code</string>
+    <string name="sign_up_step2__hint_city_town">City / Town</string>
+
+    <string name="sign_up_step3__main">Enter your Email and Password</string>
+    <string name="sign_up_step3__hint_your_email">Your email</string>
+    <string name="sign_up_step3__hint_repeat_your_email">Repeat your email</string>
+    <string name="sign_up_step3__hint_your_password">Your password</string>
+    <string name="sign_up_step3__hint_repeat_your_password">Repeat your password</string>
+    <string name="sign_up_step3__terms_agreement">By proceeding, you hereby agree with BankPro<br/>
+Terms &amp; Conditions and Privacy Policy.</string>
+
 </resources>

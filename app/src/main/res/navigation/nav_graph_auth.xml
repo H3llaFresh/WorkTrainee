@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph_auth"
+    app:startDestination="@id/introFragment">
+
+    <fragment
+        android:id="@+id/introFragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.start.intro.IntroFragment"
+        android:label="IntroFragment">
+        <action
+            android:id="@+id/openSignUpStep1"
+            app:destination="@id/signUpStep1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpStep1Fragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.start.signup.step1.SignUpStep1Fragment"
+        android:label="SignUpStep1Fragment">
+        <action
+            android:id="@+id/openNextStep"
+            app:destination="@id/signUpStep2Fragment" />
+        <action
+            android:id="@+id/openCountryOfResidence"
+            app:destination="@id/countryOfResidenceFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpStep2Fragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.start.signup.step2.SignUpStep2Fragment"
+        android:label="SignUpStep2Fragment">
+        <action
+            android:id="@+id/openStep3"
+            app:destination="@id/signUpStep3Fragment" />
+        <action
+            android:id="@+id/openCountryOfResidence"
+            app:destination="@id/countryOfResidenceFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="countryOfResidence"
+            app:argType="by.vlfl.fxsuperpro.domain.models.CountryOfResidence" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryOfResidenceFragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.start.signup.step1.countryOfResidence.CountryOfResidenceFragment"
+        android:label="CountryOfResidenceFragment" />
+    <fragment
+        android:id="@+id/signUpStep3Fragment"
+        android:name="by.vlfl.fxsuperpro.ui.screens.start.signup.step3.SignUpStep3Fragment"
+        android:label="SignUpStep3Fragment" />
+</navigation>

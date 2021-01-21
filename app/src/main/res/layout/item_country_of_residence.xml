@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="countryItem"
+            type="by.vlfl.fxsuperpro.domain.models.CountryOfResidence" />
+
+        <variable
+            name="countryItemHandler"
+            type="by.vlfl.fxsuperpro.ui.screens.start.signup.step1.countryOfResidence.CountryOfResidenceItemHandler" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> countryItemHandler.invoke(countryItem)}"
+        tools:background="@color/splash_screen_color">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivItemCountryFlag"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginVertical="@dimen/margin_12"
+            android:layout_marginStart="@dimen/margin_16"
+            app:country_flag="@{countryItem.imageUrl}"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvItemCountryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_10"
+            android:text="@{countryItem.name}"
+            android:textAppearance="@style/TextAppearance.BankPro.Basic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ivItemCountryFlag"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Belarus" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

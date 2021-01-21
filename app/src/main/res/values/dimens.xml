@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="line_spacing_extra_2">2sp</dimen>
+
+    <dimen name="height_input_edit_text">54dp</dimen>
+
+    <dimen name="line_height_18">18sp</dimen>
+    <dimen name="line_height_22">22sp</dimen>
+    <dimen name="line_height_24">24sp</dimen>
+    <dimen name="line_height_28">28sp</dimen>
+
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="text_size_17">17sp</dimen>
+    <dimen name="text_size_22">22sp</dimen>
+    <dimen name="text_size_24">24sp</dimen>
+
+    <dimen name="margin_8">8dp</dimen>
+    <dimen name="margin_18">18dp</dimen>
+    <dimen name="margin_2">2dp</dimen>
+    <dimen name="margin_26">26dp</dimen>
+    <dimen name="margin_16">16dp</dimen>
+    <dimen name="margin_38">38dp</dimen>
+    <dimen name="margin_42">42dp</dimen>
+
+    <dimen name="width_img_select_country">180dp</dimen>
+    <dimen name="height_img_select_country">180dp</dimen>
+    <dimen name="margin_24">24dp</dimen>
+    <dimen name="margin_20">20dp</dimen>
+    <dimen name="margin_34">34dp</dimen>
+    <dimen name="margin_10">10dp</dimen>
+    <dimen name="margin_12">12dp</dimen>
+    <dimen name="margin_27">27dp</dimen>
+    <dimen name="margin_35">35dp</dimen>
+    <dimen name="margin_32">32dp</dimen>
+    <dimen name="margin_44">44dp</dimen>
+</resources>
